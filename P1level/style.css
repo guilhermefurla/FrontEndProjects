@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 95.6vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, black, rgb(37, 7, 37), rgb(77, 8, 77));
+}
+
+div#atri {
+    position: absolute;
+    display: block;
+    top: 89%;
+    margin: auto;
+    text-align: center;
+    width: 100vw;
+}
+
+a {
+    color: rgb(130, 117, 117);
+    text-decoration: none;
+    font-size: 2.2em;
+    padding: 10px;
+    text-shadow: 2px 2px 1px black;
+}
+
+span {
+    color: rgb(130, 117, 117);
+    text-decoration: none;
+    font-size: 2.2em;
+    padding: 10px;
+    text-shadow: 2px 2px 1px black;
+}
+span:hover{
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(36, 3, 36);
+    color: white;
+    transition: 1s;
+}
+
+a:hover {
+    border-radius: 20px;
+    background-color: rgb(36, 3, 36);
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 3em;
+    color: white;
+}
+p {
+    color: white;
+    font-size: 12em;
+    text-align: center;
+    margin-top: 50px;
+}
+h4.show{
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 30px;
+}
+h3.show{
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+}
