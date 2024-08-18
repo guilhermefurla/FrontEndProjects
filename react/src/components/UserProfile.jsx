@@ -1,7 +1,10 @@
+import { UserUsername } from "./UserUsername";
+
+
 export function UserProfile(){
   return (
     <div id="user-profile">
-      <p>Username: Bob</p>
+      <UserUsername username='bob' />
       <div>
         <span>Email: </span>
         <span>anson@ansonthedev.com</span>
