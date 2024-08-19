@@ -3,7 +3,7 @@ export default function App(){
   return(
     <div>
       <h1>Root component</h1>
-      <UserProfile/>
+      <UserProfile age={20} isLoggedIn={true}/>
     </div>
   )
 }
