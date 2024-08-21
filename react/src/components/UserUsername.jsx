@@ -1,9 +1,9 @@
-import "./styles.css"
+import styles from "./styles.module.css"
 
 export function UserUsername(props){
   return (
     <>
-      <b className="username">Username: </b>
+      <b className={styles.username}>Username: </b>
       <span>{props.username}</span>
     </>
   )
