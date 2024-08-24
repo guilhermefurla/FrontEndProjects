@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 export function UserDetails({ user }){
   return(
     <div>
@@ -13,4 +13,12 @@ export function UserDetails({ user }){
       <br /> 
     </div>
   )
+}
+
+UserDetails.PropTypes = {
+  user: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    username: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  })
 }
