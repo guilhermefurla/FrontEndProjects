@@ -11,7 +11,12 @@ export default function App() {
       id: 2,
       username: "michael",
       email: "michael@ansonthedev.com"
-    }
+    },
+    {
+      id: 3,
+      username: "jhon",
+      email: "jhon@ansonthedev.com"
+    },
   ]
 
   return ( <div>{mockUsers.map((user) => {
