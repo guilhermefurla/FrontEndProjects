@@ -1,7 +1,21 @@
 import React from 'react'
 
 export default function TodoList() {
+  let todos = [
+    'study react',
+    'build porjects',
+    'go for tailwind'
+  ]
   return (
-    <div>TodoList</div>
+    <ul className='main'>
+      {todos.map((todo, todoIndex) => {
+      return (
+        <li className='todoItem' key={todoIndex}>
+          {todo}
+          <i class="fa-solid fa-pen-to-square"></i>
+        </li>
+      )
+    })}
+    </ul>
   )
 }
