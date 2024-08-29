@@ -1,7 +1,9 @@
+// Selecting HTML elements
 const inputBox = document.querySelector('#input-box')
 const listContainer = document.querySelector('#list-container')
 const addTask = document.querySelector('#addTask')
 
+// Gets the todo and checks if the box is empty
 addTask.addEventListener('click', () => {
   if(inputBox.value === ''){
     alert('You must write something')
@@ -16,6 +18,8 @@ addTask.addEventListener('click', () => {
     saveData()
   }
 })
+
+// Controls the checking and removing mechanic 
 listContainer.addEventListener('click', (e) => {
   if(e.target.tagName === 'LI'){
     e.target.classList.toggle('checked')
@@ -25,9 +29,12 @@ listContainer.addEventListener('click', (e) => {
   saveData()
 })
 
+// Saves the data 
 function saveData(){
   localStorage.setItem('data', listContainer.innerHTML)
 }
+
+// Gets the data and displays it
 function getData(){
   listContainer.innerHTML = localStorage.getItem('data')
 }
