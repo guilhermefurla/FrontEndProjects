@@ -1,19 +1,21 @@
 $(document).ready(function(){
-  let dayOne = new Date('08/10/2024')
+
+  // Variables 
+  let dayOne = new Date('08/29/2024')
   let date = new Date()
   let day = date.getDate()
   let month = date.getMonth() + 1
   let year = date.getFullYear()
-
   let today = new Date(month+'/'+day+'/'+year)
 
+  // HTML Elements
   let body = $('body')
-  let element = $('a')
   let attr = $('p')
   let Ltext = $('#text')
   let h3 = $('h3')
   let h4 = $('h4')
 
+  // Gets your level
   function Atualizar1(){
     let level = 1
     let multiplier = getMultiplier()
@@ -26,6 +28,8 @@ $(document).ready(function(){
     $('h3').text(days)
     attr.text(level)
   }
+
+  // Gets the level of the status
   function Atualizar2(){
     let multiplier = getMultiplier()
     while(multiplier > 10){
@@ -33,13 +37,18 @@ $(document).ready(function(){
     }
     attr.text(multiplier)
   }
+
+  // Gets how many days it has been
   function getMultiplier(){
     let diff = today.getTime() - dayOne.getTime()
     let ms = 1000 * 3600 * 24
     let multiplier = diff/ms
     return multiplier
   }
+
   Atualizar1()
+
+  // OnClick functions to change the status
   $('#lvl').click(function(){
     if(h3.hasClass('show')){
       Atualizar1()
