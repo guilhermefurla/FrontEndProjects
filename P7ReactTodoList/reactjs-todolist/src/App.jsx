@@ -37,6 +37,7 @@ export default function App() {
     handleDeleteTodo(index)
   }
 
+  // Gets the todo list from storage if there is any
   useEffect(() => {
     if(!localStorage){
       return
