@@ -4,18 +4,24 @@ import TodoList from "./components/TodoList";
 
 
 export default function App() {
+  // Main todo list
   const [todos, setTodos] = useState([])
+  // Used on TodoInput to get a new Todo and pass it to the handleAddTodos funciton
   const [todoValue, setTodoValue] = useState('')
 
+  // Sets the todoList on storage
   function persistData(newList) {
     localStorage.setItem('todos', JSON.stringify({ todos: newList }))
   }
 
+  // Adds new todos
   function handleAddTodos(newTodo){
     const newTodoList = [...todos, newTodo]
     persistData(newTodoList)
     setTodos(newTodoList)
   }
+
+  // Deletes todos
   function handleDeleteTodo(index){
     const newTodoList = todos.filter((todo, todoIndex) => {
       return todoIndex !== index
@@ -23,6 +29,8 @@ export default function App() {
     persistData(newTodoList)
     setTodos(newTodoList)
   }
+
+  // Edits todos
   function handleEditTodo(index){
     const valueToBeEdited = todos[index]
     setTodoValue(valueToBeEdited)
