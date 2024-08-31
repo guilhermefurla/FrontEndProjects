@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   // Variables 
-  let dayOne = new Date('08/29/2024')
+  let dayOne = new Date('08/31/2024')
   let date = new Date()
   let day = date.getDate()
   let month = date.getMonth() + 1
