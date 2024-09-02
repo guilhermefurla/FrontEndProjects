@@ -16,9 +16,9 @@ export default function App() {
 
   // Adds new todos
   function handleAddTodos(newTodo){
-    const newTodoList = [...todos, newTodo]
-    persistData(newTodoList)
-    setTodos(newTodoList)
+    // const newTodoList = [...todos, newTodo]
+    persistData([...todos, newTodo])
+    setTodos([...todos, newTodo])
   }
 
   // Deletes todos
