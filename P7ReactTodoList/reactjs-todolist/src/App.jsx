@@ -21,7 +21,7 @@ export default function App() {
     setTodos([...todos, newTodo])
   }
 
-  // Deletes todos
+  // Deletes todos by comparing the index
   function handleDeleteTodo(index){
     const newTodoList = todos.filter((todo, todoIndex) => {
       return todoIndex !== index
