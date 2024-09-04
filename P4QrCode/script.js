@@ -13,6 +13,8 @@ button.addEventListener('click', () => {
    imgBox.classList.add('show-img')
   }
 })
+
+
 async function getCode(){
   img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + text.value
 }

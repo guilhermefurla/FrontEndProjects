@@ -8,7 +8,6 @@ export default function TodoList({todos, handleDeleteTodo, handleEditTodo}) {
       {todos.map((todo, todoIndex) => {
       return (
         <TodoCard handleDeleteTodo={handleDeleteTodo} handleEditTodo={handleEditTodo} todo={todo} index={todoIndex} key={todoIndex}>
-
         </TodoCard>
       )
     })}

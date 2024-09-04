@@ -6,6 +6,7 @@ import TodoList from "./components/TodoList";
 export default function App() {
   // Main todo list
   const [todos, setTodos] = useState([])
+  
   // Used on TodoInput to get a new Todo and pass it to the handleAddTodos funciton
   const [todoValue, setTodoValue] = useState('')
 
@@ -16,7 +17,6 @@ export default function App() {
 
   // Adds new todos
   function handleAddTodos(newTodo){
-    // const newTodoList = [...todos, newTodo]
     persistData([...todos, newTodo])
     setTodos([...todos, newTodo])
   }
