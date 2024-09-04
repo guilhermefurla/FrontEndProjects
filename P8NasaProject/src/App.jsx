@@ -1,10 +1,13 @@
+import Footer from "./components/Footer"
+import Main from "./components/Main"
+import SideBar from "./components/SideBar"
 
-function App() {
+export default function App() {
   return (
     <>
-     
+     <SideBar/>
+     <Main/>
+     <Footer/>
     </>
   )
 }
-
-export default App
